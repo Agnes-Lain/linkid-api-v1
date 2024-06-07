@@ -12,7 +12,7 @@ gem "sqlite3", "~> 1.4"
 gem "puma", ">= 5.0"
 
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
-# gem "jbuilder"
+gem "jbuilder"
 
 # Use Redis adapter to run Action Cable in production
 # gem "redis", ">= 4.0.1"
@@ -23,11 +23,18 @@ gem "puma", ">= 5.0"
 # Use Active Model has_secure_password [https://guides.rubyonrails.org/active_model_basics.html#securepassword]
 # gem "bcrypt", "~> 3.1.7"
 
+# import devise for authorization management
+gem 'devise'
+gem 'devise-jwt'
+
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem "tzinfo-data", platforms: %i[ mswin mswin64 mingw x64_mingw jruby ]
 
 # Reduces boot times through caching; required in config/boot.rb
 gem "bootsnap", require: false
+
+# CORS (cross-origin resource sharing) is an HTTP-header-based security mechanism that defines who’s allowed to interact with your API. CORS is built into all modern web browsers.
+gem 'rack-cors'
 
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 # gem "image_processing", "~> 1.2"
@@ -46,4 +53,3 @@ group :development do
 
   gem "error_highlight", ">= 0.4.0", platforms: [:ruby]
 end
-
